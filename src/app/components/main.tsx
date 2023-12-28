@@ -4,7 +4,7 @@ import "./main.css";
 import { Button, Slide } from "@mui/material";
 
 const about = (
-  <div>
+  <div className='about'>
     <h1>About</h1>
     <p>Paragraphs about the kid</p>
   </div>
