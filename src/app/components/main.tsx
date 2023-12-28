@@ -1,9 +1,10 @@
 import React from "react";
+import "./main.css";
 
 function Main() {
   return (
     <div>
-      <div>
+      <div className='main'>
         <h1>JP Luncumilla</h1>
         <p>Frontend Software Engineer</p>
       </div>
