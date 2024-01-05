@@ -4,9 +4,12 @@ import "./main.css";
 import { Button, Slide } from "@mui/material";
 
 const about = (
+  handleChecked: React.MouseEventHandler<HTMLButtonElement> | undefined
+) => (
   <div className='about'>
     <h1>About</h1>
     <p>Paragraphs about the kid</p>
+    <Button onClick={handleChecked}>About</Button>
   </div>
 );
 function Main() {
@@ -23,7 +26,7 @@ function Main() {
         <Button onClick={handleChecked}>About</Button>
       </div>
       <Slide direction='left' in={checked} mountOnEnter unmountOnExit>
-        {about}
+        {about(handleChecked)}
       </Slide>
     </div>
   );
