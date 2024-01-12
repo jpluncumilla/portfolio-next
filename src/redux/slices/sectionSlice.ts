@@ -9,7 +9,6 @@ const initialState: MySliceState = {
     about: false,
     work: false,
     contact: false,
-    all: false,
   },
 };
 
