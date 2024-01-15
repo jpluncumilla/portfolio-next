@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import "./main.css";
 import { Button, Slide } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,14 +13,8 @@ const about = () => (
   </div>
 );
 function Main() {
-  const [checked, setChecked] = useState<boolean>(false);
   const dispatch = useDispatch();
   const { sections } = useSelector((state: RootState) => state.section);
-  console.log(Object.keys(sections));
-
-  const handleChecked = () => {
-    setChecked(!checked);
-  };
 
   const handleReduxClick = (section: string) => {
     dispatch(setSection(section));
