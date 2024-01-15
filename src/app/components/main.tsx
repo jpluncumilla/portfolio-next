@@ -6,13 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { setSection } from "@/redux/slices/sectionSlice";
 
-const about = (
-  handleChecked: React.MouseEventHandler<HTMLButtonElement> | undefined
-) => (
+const about = () => (
   <div className='about'>
     <h1>About</h1>
     <p>Paragraphs about the kid</p>
-    <Button onClick={handleChecked}>About</Button>
   </div>
 );
 function Main() {
@@ -34,13 +31,19 @@ function Main() {
         <h1>JP Luncumilla</h1>
         <p>Frontend Software Engineer</p>
         {Object.keys(sections).map((e) => (
-          <Button key={e}>{e}</Button>
+          <Button onClick={() => handleReduxClick(e)}>{e}</Button>
         ))}
-        <Button onClick={handleChecked}>About</Button>
       </div>
-      <Slide direction='left' in={checked} mountOnEnter unmountOnExit>
-        {about(handleChecked)}
-      </Slide>
+
+      {Object.entries(sections).map(([key, value]) => (
+        <div key={key}>
+          {value === true && (
+            <Slide direction='left' in={value} mountOnEnter unmountOnExit>
+              {eval(key)()}
+            </Slide>
+          )}
+        </div>
+      ))}
     </div>
   );
 }
