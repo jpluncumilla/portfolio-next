@@ -36,11 +36,9 @@ function Main() {
         const Component = componentMapping[key];
         return (
           <div key={key}>
-            {value === true && (
-              <Slide direction='left' in={value} mountOnEnter unmountOnExit>
-                <div>{Component && <Component />}</div>
-              </Slide>
-            )}
+            <Slide direction='left' in={value} mountOnEnter unmountOnExit>
+              <div>{Component && <Component />}</div>
+            </Slide>
           </div>
         );
       })}

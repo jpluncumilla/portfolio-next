@@ -21,9 +21,15 @@ const sectionSlice = createSlice({
         state.sections[section] = section === action.payload;
       });
     },
+    resetSections: (state) => {
+      // Turn all sections back to false
+      Object.keys(state.sections).forEach((section) => {
+        state.sections[section] = false;
+      });
+    },
   },
 });
 
-export const { setSection } = sectionSlice.actions;
+export const { setSection, resetSections } = sectionSlice.actions;
 
 export default sectionSlice.reducer;
