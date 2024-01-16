@@ -1,21 +1,24 @@
 "use client";
 import React from "react";
 import "./main.css";
+import About from "./about";
+import Contact from "./contact";
+import Work from "./work";
 import { Button, Slide } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { setSection } from "@/redux/slices/sectionSlice";
 
-const about = () => (
-  <div className='about'>
-    <h1>About</h1>
-    <p>Paragraphs about the kid</p>
-  </div>
-);
 function Main() {
   const dispatch = useDispatch();
   const { sections } = useSelector((state: RootState) => state.section);
-
+  const componentMapping: {
+    [key: string]: () => React.JSX.Element;
+  } = {
+    about: () => <About />,
+    work: () => <Work />,
+    contact: () => <Contact />,
+  };
   const handleReduxClick = (section: string) => {
     dispatch(setSection(section));
   };
@@ -29,15 +32,18 @@ function Main() {
         ))}
       </div>
 
-      {Object.entries(sections).map(([key, value]) => (
-        <div key={key}>
-          {value === true && (
-            <Slide direction='left' in={value} mountOnEnter unmountOnExit>
-              {eval(key)()}
-            </Slide>
-          )}
-        </div>
-      ))}
+      {Object.entries(sections).map(([key, value]) => {
+        const Component = componentMapping[key];
+        return (
+          <div key={key}>
+            {value === true && (
+              <Slide direction='left' in={value} mountOnEnter unmountOnExit>
+                <div>{Component && <Component />}</div>
+              </Slide>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
