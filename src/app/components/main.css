@@ -1,3 +1,9 @@
+/* @import url("https://fonts.cdnfonts.com/css/druk-trial"); */
+/* @import url("https://fonts.cdnfonts.com/css/protestant"); */
+
+@import url("https://p.typekit.net/p.css?s=1&k=duo3tdm&ht=tk&f=19121.19123&a=12497077&app=typekit&e=css");
+@import url("https://fonts.cdnfonts.com/css/druk-wide-bold");
+
 .main {
   display: flex;
   flex-direction: column;
@@ -14,8 +20,44 @@
   flex-direction: column;
   width: 90%;
   height: 90vh;
-  align-items: center;
-  justify-content: center;
   margin-top: -95vh;
-  margin-left: 10vh;
+  margin-left: 5%;
+  padding: 3em;
+}
+.about-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+}
+.about-content p {
+  font-family: "akzidenz-grotesk", sans-serif;
+  font-weight: 200 !important;
+  font-size: 17px;
+  text-align: left;
+  width: 25em;
+}
+
+.title {
+  font-family: "Druk Wide Bold", sans-serif;
+  font-size: 75px;
+  text-align: center;
+}
+
+.logo {
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  font-family: "Druk Wide Bold", sans-serif;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo span {
+  margin-bottom: -15px;
+}
+
+.top-menu {
+  display: flex;
+  justify-content: space-between;
 }

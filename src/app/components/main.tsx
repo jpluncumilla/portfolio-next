@@ -28,7 +28,9 @@ function Main() {
         <h1>JP Luncumilla</h1>
         <p>Frontend Software Engineer</p>
         {Object.keys(sections).map((e) => (
-          <Button onClick={() => handleReduxClick(e)}>{e}</Button>
+          <Button key={e} onClick={() => handleReduxClick(e)}>
+            {e}
+          </Button>
         ))}
       </div>
 
