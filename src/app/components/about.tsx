@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { resetSections } from "@/redux/slices/sectionSlice";
 import { Button } from "@mui/material";
-import ClearIcon from "@mui/icons-material/Clear";
+import WestIcon from "@mui/icons-material/West";
 
 function about() {
   const dispatch = useDispatch();
@@ -17,9 +17,9 @@ function about() {
         <p className='logo'>
           <span>LUNCU</span>
           <span>MILLA</span>
-          <span>.IO</span>
+          <span>.DEV</span>
         </p>
-        <ClearIcon onClick={handleReset}>{/* <ClearIcon /> */}</ClearIcon>
+        <WestIcon onClick={handleReset}>{/* <ClearIcon /> */}</WestIcon>
       </div>
 
       <div className='about-content'>
@@ -36,9 +36,9 @@ function about() {
           I am committed to producing clean, efficient, and scalable code, all
           while ensuring optimal functionality through rigorous software
           testing.
-          <br></br> Let's collaborate to elevate digital experiences to new
-          heights.
         </p>
+        <br></br>
+        <p>Let's collaborate to elevate digital experiences to new heights.</p>
       </div>
     </div>
   );
