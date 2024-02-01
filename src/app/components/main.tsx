@@ -25,13 +25,28 @@ function Main() {
   return (
     <div>
       <div className='main'>
-        <h1>JP Luncumilla</h1>
-        <p>Frontend Software Engineer</p>
-        {Object.keys(sections).map((e) => (
-          <Button key={e} onClick={() => handleReduxClick(e)}>
-            {e}
-          </Button>
-        ))}
+        <div className='main-logo'>
+          <p className='logo'>
+            <span>LUNCU</span>
+            <span>MILLA</span>
+            <span>.DEV</span>
+          </p>
+        </div>
+
+        <div className='main-content'>
+          <h1 className='main-title'>JP LUNCUMILLA</h1>
+          <p className='main-subtitle'>FRONTEND SOFTWARE ENGINEER</p>
+        </div>
+
+        <div className='main-menu'>
+          {Object.keys(sections).map((e, i) => (
+            <a href='#'>
+              <p key={e} onClick={() => handleReduxClick(e)}>
+                {i + 1 + ". " + e + "."}
+              </p>
+            </a>
+          ))}
+        </div>
       </div>
 
       {Object.entries(sections).map(([key, value]) => {
