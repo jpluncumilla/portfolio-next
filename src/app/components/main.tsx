@@ -46,6 +46,12 @@ function Main() {
               </p>
             </a>
           ))}
+          <a
+            href='https://drive.google.com/file/d/17jloNb7V4A1i_2zjTD2ZSoCgkCFkIjKy/view?usp=sharing'
+            target='_blank'
+          >
+            <p>{"4. resume."}</p>
+          </a>
         </div>
       </div>
 

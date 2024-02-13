@@ -25,10 +25,11 @@ function about() {
       <div className='about-content'>
         <h1 className='title'>ABOUT.</h1>
         <p>
-          I'm a Frontend Engineer with 4+ years in the field. Throughout my
-          career, I have been dedicated to assisting Marketing Agencies, product
-          startups, and Department of Defense agencies in enhancing their
-          products through innovative Javascript-based solutions.
+          I'm a Miami,FL based Frontend Engineer with 4+ years in the field.
+          Throughout my career, I have been dedicated to assisting Marketing
+          Agencies, product startups, and Department of Defense agencies in
+          enhancing their products through innovative Javascript-based
+          solutions.
         </p>
         <br></br>
         <p>
