@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { resetSections } from "@/redux/slices/sectionSlice";
 import {
@@ -9,10 +9,11 @@ import {
   CardMedia,
   Collapse,
   Typography,
+  styled,
 } from "@mui/material";
 import WestIcon from "@mui/icons-material/West";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { ExpandMore } from "@mui/icons-material";
+import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 
 const projects = [
   {
@@ -29,8 +30,28 @@ const projects = [
   },
 ];
 
+interface ExpandMoreProps extends IconButtonProps {
+  expand: boolean;
+}
+
+const ExpandMore = styled((props: ExpandMoreProps) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+  marginLeft: "auto",
+  transition: theme.transitions.create("transform", {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
+
 function work() {
   const dispatch = useDispatch();
+  const [expanded, setExpanded] = useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
 
   const handleReset = () => {
     dispatch(resetSections());
@@ -61,16 +82,16 @@ function work() {
               <CardActions>
                 <Button size='small'>Visit site</Button>
                 <ExpandMore
-                //   expand={expanded}
-                //   onClick={handleExpandClick}
-                //   aria-expanded={expanded}
-                //   aria-label='show more'
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label='show more'
                 >
                   <ExpandMoreIcon />
                 </ExpandMore>
               </CardActions>
-              <Collapse in={false} timeout='auto' unmountOnExit>
-                Add project description prop
+              <Collapse in={expanded} timeout='auto' unmountOnExit>
+                <Typography>Add project description prop</Typography>
               </Collapse>
             </Card>
           ))}
