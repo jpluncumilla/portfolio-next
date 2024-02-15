@@ -4,7 +4,7 @@ import { resetSections } from "@/redux/slices/sectionSlice";
 import { Button } from "@mui/material";
 import WestIcon from "@mui/icons-material/West";
 
-function about() {
+function About() {
   const dispatch = useDispatch();
 
   const handleReset = () => {
@@ -45,4 +45,4 @@ function about() {
   );
 }
 
-export default about;
+export default About;

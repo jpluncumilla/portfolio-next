@@ -30,19 +30,19 @@ function contact() {
 
         <div className='contact-links'>
           <a href='https://www.linkedin.com/in/jpluncumilla/' target='_blank'>
-            <p>1. linkedin</p>
+            <p>1. linkedin.</p>
           </a>
           <a href='https://github.com/jpluncumilla' target='_blank'>
-            <p>2. github</p>
+            <p>2. github.</p>
           </a>
-          <a href='https://github.com/jpluncumilla' target='_blank'>
-            <p>3. email</p>
+          <a href='mailto:jpluncumilla@gmail.com' target='_blank'>
+            <p>3. email.</p>
           </a>
           <a
             href='https://drive.google.com/file/d/17jloNb7V4A1i_2zjTD2ZSoCgkCFkIjKy/view?usp=sharing'
             target='_blank'
           >
-            <p>4. resume</p>
+            <p>4. resume.</p>
           </a>
         </div>
         <Box
