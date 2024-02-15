@@ -40,7 +40,7 @@ function Main() {
 
         <div className='main-menu'>
           {Object.keys(sections).map((e, i) => (
-            <a href='#'>
+            <a href='#' key={i}>
               <p key={e} onClick={() => handleReduxClick(e)}>
                 {i + 1 + ". " + e + "."}
               </p>

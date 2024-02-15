@@ -25,7 +25,9 @@ function Contact() {
       <div className='contact-content'>
         <h1 className='title'>CONTACT.</h1>
         <div className='contact-text'>
-          <p>Let's connect, collaborate and make your project a reality.</p>
+          <p>
+            Let&apos;s connect, collaborate and make your project a reality.
+          </p>
         </div>
 
         <div className='contact-links'>
