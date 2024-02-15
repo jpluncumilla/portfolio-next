@@ -21,28 +21,78 @@ function contact() {
         <WestIcon onClick={handleReset}>{/* <ClearIcon /> */}</WestIcon>
       </div>
 
-      <div className='about-content'>
+      <div className='contact-content'>
         <h1 className='title'>CONTACT.</h1>
+        <div className='contact-text'>
+          <p>Let's connect, collaborate and make your project a reality.</p>
+        </div>
+
+        <div className='contact-links'>
+          <a href='https://www.linkedin.com/in/jpluncumilla/' target='_blank'>
+            <p>1. linkedin</p>
+          </a>
+          <a href='https://github.com/jpluncumilla' target='_blank'>
+            <p>2. github</p>
+          </a>
+          <a href='https://github.com/jpluncumilla' target='_blank'>
+            <p>3. email</p>
+          </a>
+          <a
+            href='https://drive.google.com/file/d/17jloNb7V4A1i_2zjTD2ZSoCgkCFkIjKy/view?usp=sharing'
+            target='_blank'
+          >
+            <p>4. resume</p>
+          </a>
+        </div>
         <Box
           component='form'
           sx={{
-            "& > :not(style)": { m: 1, width: "40ch", color: "#fffff" },
+            "& > :not(style)": { m: 1, width: "40ch", borderColor: "#fffff" },
+            "& label.Mui-focused": {
+              color: "white",
+            },
+            "& .MuiInput-underline:after": {
+              borderBottomColor: "white",
+            },
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderColor: "white",
+              },
+              "&:hover fieldset": {
+                borderColor: "white",
+              },
+              "&.Mui-focused fieldset": {
+                borderColor: "white",
+              },
+            },
           }}
           noValidate
           autoComplete='off'
         >
-          <TextField
-            id='outlined-basic'
-            label='Outlined'
-            variant='outlined'
-            color='warning'
-          />
-          <TextField id='standard-basic' label='E-mail' variant='filled' />
+          <TextField id='outlined-basic' label='Name' variant='outlined' />
+          <TextField id='standard-basic' label='E-mail' variant='outlined' />
         </Box>
         <Box
           component='form'
           sx={{
             "& > :not(style)": { m: 1, width: "40ch" },
+            "& label.Mui-focused": {
+              color: "white",
+            },
+            "& .MuiInput-underline:after": {
+              borderBottomColor: "white",
+            },
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderColor: "white",
+              },
+              "&:hover fieldset": {
+                borderColor: "white",
+              },
+              "&.Mui-focused fieldset": {
+                borderColor: "white",
+              },
+            },
           }}
           noValidate
           autoComplete='off'
@@ -50,9 +100,9 @@ function contact() {
           <TextField
             id='standard-basic'
             label='Company name'
-            variant='filled'
+            variant='outlined'
           />
-          <TextField id='standard-basic' label='Message' variant='filled' />
+          <TextField id='standard-basic' label='Message' variant='outlined' />
         </Box>
       </div>
     </div>

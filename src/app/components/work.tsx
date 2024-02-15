@@ -18,15 +18,45 @@ import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 const projects = [
   {
     id: 1,
-    name: "WIDOW",
+    name: "WIDOW APP",
     stack: "React.js, Redux, MUI, Jest",
+    link: "https://www.widow.app/",
     image: "widow.png",
   },
   {
     id: 2,
-    name: "RANDOM",
-    stack: "React.js, Redux, MUI, Jest",
-    image: "widow.png",
+    name: "CircleHub",
+    stack: "Wordpress, HTML & CSS",
+    link: "https://circlehub.net/",
+    image: "circlehub.png",
+  },
+  {
+    id: 3,
+    name: "TRUDAT APP",
+    stack: "Next.js, Redux, MUI & Jest",
+    link: "https://braingu.com/solutions/custom-app-dev/",
+    image: "trudat.png",
+  },
+  {
+    id: 4,
+    name: "Stern-X",
+    stack: "React.js, Redux & Bootstrap",
+    link: "https://stern-x.com/",
+    image: "stern.png",
+  },
+  {
+    id: 5,
+    name: "Introlift",
+    stack: "Wordpress, HTML & CSS",
+    link: "https://introlift.com/",
+    image: "introlift.png",
+  },
+  {
+    id: 6,
+    name: "FLPL",
+    stack: "Wordpress, HTML & CSS",
+    link: "https://flpl.biz/",
+    image: "flpl.png",
   },
 ];
 
@@ -80,7 +110,11 @@ function work() {
                 {/*Pass prop desctiption */}
               </CardContent>
               <CardActions>
-                <Button size='small'>Visit site</Button>
+                <Button size='small'>
+                  <a href={e.link} target='_blank'>
+                    Visit site
+                  </a>
+                </Button>
                 <ExpandMore
                   expand={expanded}
                   onClick={handleExpandClick}
