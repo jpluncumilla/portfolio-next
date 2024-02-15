@@ -5,7 +5,7 @@ import { Box, Button, TextField } from "@mui/material";
 import WestIcon from "@mui/icons-material/West";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-function contact() {
+function Contact() {
   const dispatch = useDispatch();
 
   const handleReset = () => {
@@ -119,4 +119,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default Contact;

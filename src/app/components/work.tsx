@@ -75,7 +75,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-function work() {
+function Work() {
   const dispatch = useDispatch();
   const [expanded, setExpanded] = useState(false);
 
@@ -135,4 +135,4 @@ function work() {
   );
 }
 
-export default work;
+export default Work;
