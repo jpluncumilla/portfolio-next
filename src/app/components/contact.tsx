@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { resetSections } from "@/redux/slices/sectionSlice";
 import { Box, Button, TextField } from "@mui/material";
 import WestIcon from "@mui/icons-material/West";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 function contact() {
   const dispatch = useDispatch();
@@ -104,6 +105,15 @@ function contact() {
           />
           <TextField id='standard-basic' label='Message' variant='outlined' />
         </Box>
+        <div className='content-button'>
+          <Button
+            variant='contained'
+            color='success'
+            endIcon={<ArrowForwardIosIcon />}
+          >
+            SUBMIT
+          </Button>
+        </div>
       </div>
     </div>
   );
